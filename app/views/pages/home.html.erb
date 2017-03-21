@@ -8,12 +8,9 @@
       <div class="well">
         <h1 class="text-center"> Regístrate!</h1>
         <h3 class="text-center">...y Adquiere acceso a nuestros productos</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi iusto 
-        itaque quisquam laboriosam natus quia deleniti harum necessitatibus.
-        Officiis aspernatur impedit nobis dignissimos facere libero eveniet 
-        nostrum commodi quam molestiae.</h4>
+        <h4>Tendras una amena relacion comercial con nuestra empresa, puedes contactar a nuestros representates de ventas y compras. ofrecer sus productos y solicitar ofertas de nuestro catalogo de productos</h4>
         <br>
-        <%= link_to "Regístrate como Cliente", "#", class: 'btn btn-primary btn-lg btn-block' %>
+        <%= link_to "Regístrate", new_user_registration_path(hierarchy: @external.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
       <div class="col-md-6">
