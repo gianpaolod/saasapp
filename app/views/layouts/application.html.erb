@@ -23,9 +23,13 @@
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
-          <div class="nav navbar-nav navbar-right">
-            <%= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-default navbar-btn"  %>
-            <%= link_to "Regístrate", new_user_registration_path, class: "btn btn-default navbar-btn"%>
+          <div class="nav navbar-nav navbar-right">          
+            <% if user_signed_in? %>
+              <%= link_to "Salir", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+            <% else %>
+              <%= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-default navbar-btn"  %>
+              <%= link_to "Regístrate", new_user_registration_path, class: "btn btn-default navbar-btn"%>
+            <% end %>
           </div>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Nosotros", about_path %></li>
