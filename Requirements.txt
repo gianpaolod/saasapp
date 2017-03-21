@@ -1,5 +1,5 @@
 Hierarchies
-* Sign in button is for Customers
+* Sign in button is for Customers only
 * Log in button is for Workers and Customers
 * Depends on Hierarchies Id login button should point to its custom page
 * Create each Hierarchy level its custom page to work with
