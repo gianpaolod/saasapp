@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Hierarchy.create(name: 'superAdmin', level: 0)
+Hierarchy.create(name: 'SuperAdmin', level: 0)
 Hierarchy.create(name: 'Admin', level: 1)
 Hierarchy.create(name: 'CEO', level: 2)
 Hierarchy.create(name: 'Director', level: 3)
 Hierarchy.create(name: 'Manager', level: 4)
 Hierarchy.create(name: 'SeniorManager', level: 5)
+Hierarchy.create(name: 'Customer', level: 6)
