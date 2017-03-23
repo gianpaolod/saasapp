@@ -4,11 +4,8 @@
       <div class="well">
         <% if params[:hierarchy] == '0' %>
           <%= render "internal_form" %>
-        <% elsif params[:hierarchy] == '6'%>
-          
-          <%= render "external_form" %>
         <% else %>
-          <h1>ACCESS DENIED</h1>
+          <%= render "external_form" %>
         <% end %>
         <%= render "devise/shared/links" %>
       </div>
