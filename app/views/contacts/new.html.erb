@@ -6,8 +6,8 @@
       <div class="well">
         <%= form_for @contact do |f| %>
           <div class="form-group">
-            <%= f.label :nombre %>
-            <%= f.text_field :nombre, class: 'form-control' %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
           </div>
       
           <div class="form-group">
@@ -16,11 +16,11 @@
           </div>
             
           <div class="form-group"> 
-            <%= f.label :comentarios %>
-            <%= f.text_area :comentarios, class: 'form-control' %>
+            <%= f.label :comments %>
+            <%= f.text_area :comments, class: 'form-control' %>
           </div>
           
-          <%= f.submit 'Enviar', class: 'btn btn-default' %>
+          <%= f.submit class: 'btn btn-default' %>
         <% end %>
       </div>
     </div>
