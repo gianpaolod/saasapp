@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.0'
 # Use Puma as the app server
 gem 'puma', '3.4.0'
+# Use prostgresql as the database for Active Record
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.6'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,12 +49,16 @@ gem 'stripe', '1.48.0'
 gem 'figaro', '1.1.1'
 
 # Use Paperclip and AWS-SDK for image upload
-gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
+gem 'paperclip'
 gem 'aws-sdk'
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'faker'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
@@ -68,7 +74,7 @@ end
 
 group :production do
   # Use the PostgreSQL gem for Heroku/GCloud production servers
-  gem 'pg', '0.18.4'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

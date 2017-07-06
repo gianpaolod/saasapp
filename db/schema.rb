@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170705224239) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -25,8 +28,8 @@ ActiveRecord::Schema.define(version: 20170705224239) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_microposts_on_user_id"
+    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at", using: :btree
+    t.index ["user_id"], name: "index_microposts_on_user_id", using: :btree
   end
 
   create_table "plans", force: :cascade do |t|
@@ -67,8 +70,8 @@ ActiveRecord::Schema.define(version: 20170705224239) do
     t.datetime "updated_at",                          null: false
     t.integer  "plan_id"
     t.string   "stripe_customer_token"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
