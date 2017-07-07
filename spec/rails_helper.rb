@@ -38,17 +38,17 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = false
 
-  config.include FactoryGirl::Sybntax::Methods
+  config.include FactoryGirl::Syntax::Methods
   
   # config.include Devise::TestHelpers, :type => :controller
   
   # config.include Features, :type => :feature
-  # config.include Features::SessionHelpers, type: :feature
+  config.include Features::SessionHelpers, type: :feature
   
-  # config.include Warden::Test::Helpers
-  # config.before :suite do
-  #   Warden.test_mode!
-  # end
+  config.include Warden::Test::Helpers
+  config.before :suite do
+    Warden.test_mode!
+  end
   
   # config.include Paperclip::Shoulda::Matchers
   # RSpec Rails can automatically mix in different behaviours to your tests
