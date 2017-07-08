@@ -19,8 +19,9 @@
         </div>
       <% end %>
     </div>
-    <div class="col-md-8">
-      <% if @user.microposts.any? %>
+  </div>
+    <div class="col-md-4 col-md-offset-4">
+    <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
         <%= render @microposts %>
@@ -28,5 +29,3 @@
       <%= will_paginate @microposts %>
     <% end %>
   </div>
-  </div>
-</div>
