@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'Nosotros', to: 'pages#about', as: 'about'
   resources :contacts, only: :create
   get 'Contactanos', to: 'contacts#new', as: 'new_contact'
+  resources :microposts,          only: [:create, :destroy]
 end

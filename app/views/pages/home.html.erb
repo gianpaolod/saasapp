@@ -6,7 +6,19 @@
 <div class="container home-signup-links">
   <div class="row">
     <% if user_signed_in? %>
-      <div class="col-md-6">
+      <% if current_user.profile %>
+        <aside class="col-md-4">
+          <div class="well">
+            <section class="user_info">
+              <%= render 'shared/user_info' %>
+            </section>
+            <section class="micropost_form">
+              <%= render 'shared/micropost_form' %>
+            </section>
+          </div>
+        </aside>
+      <% end %>
+      <div class="col-md-4">
         <div class="well">
           <h2 class="text-center">Your Profile</h2>
           <% if current_user.profile %>
@@ -18,7 +30,7 @@
           <% end %>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="well">
           <h2 class="text-center">The Community</h2>
           <p>Visit the community to meet other developers, entrepreneurs, and investors!</p>
