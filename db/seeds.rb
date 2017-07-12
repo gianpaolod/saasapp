@@ -5,9 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# Plans
 Plan.create(name: 'basic', price: 0)
 Plan.create(name: 'pro', price: 10)
 
+# Users
 10.times do |n|
   email = "test#{n+1}@example.com"
   password = "password"
@@ -15,6 +19,7 @@ Plan.create(name: 'pro', price: 10)
   User.create!(email: email, password: password, plan_id: plan_id)
 end
 
+# Profiles
 10.times do |n|
 
   user_id = n+1
@@ -30,6 +35,7 @@ end
   
 end
 
+# Microposts
 users = User.order(:created_at).take(10)
 50.times do
   content = Faker::Lorem.sentence(5)

@@ -8,6 +8,12 @@ class User < ApplicationRecord
   belongs_to :plan
   has_one :profile
   
+  # Defines a proto-feed.
+  # See "following users" for full implementation.
+  def feed
+    Micropost.where("user_id = ?", id).includes(:user)
+  end
+  
   attr_accessor :stripe_card_token
   # If pro user passes validations (email, password, etc.).
   # then call Stripe and tell Stripe to set up subscription
