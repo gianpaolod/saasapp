@@ -52,6 +52,8 @@ gem 'stripe', '1.48.0'
 gem 'figaro', '1.1.1'
 
 # Use Paperclip and AWS-SDK for image upload
+gem 'carrierwave'
+gem "mini_magick"
 gem 'paperclip'
 gem 'aws-sdk'
 
