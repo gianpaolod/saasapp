@@ -52,8 +52,8 @@ gem 'stripe', '1.48.0'
 gem 'figaro', '1.1.1'
 
 # Use Paperclip and AWS-SDK for image upload
-gem 'carrierwave'
-gem 'fog-aws'
+gem 'fog-aws', group: :production
+gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 gem 'paperclip'
 gem 'aws-sdk'
@@ -81,6 +81,7 @@ group :development do
 end
 
 group :production do
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
