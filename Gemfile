@@ -53,9 +53,13 @@ gem 'figaro', '1.1.1'
 
 # Use Paperclip and AWS-SDK for image upload
 gem 'carrierwave'
+gem 'fog-aws'
 gem "mini_magick"
 gem 'paperclip'
 gem 'aws-sdk'
+
+# Faking users and content
+gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -63,7 +67,6 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'faker'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
@@ -78,8 +81,6 @@ group :development do
 end
 
 group :production do
-  # Use the PostgreSQL gem for Heroku/GCloud production servers
-  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
