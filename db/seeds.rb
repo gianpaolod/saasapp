@@ -29,7 +29,7 @@ end
   job_title = ['Developer', 'Entrepreneur', 'Investor'].sample
   phone_number = Faker::PhoneNumber.phone_number
   contact_email = Faker::Internet.email
-  description = Faker::Lorem.sentence
+  description = Faker::DrWho.quote
   
   Profile.create!(user_id: user_id, first_name: first_name, last_name: last_name, avatar: avatar, job_title: job_title, phone_number: phone_number, contact_email: contact_email, description: description )
   
@@ -38,6 +38,6 @@ end
 # Microposts
 users = User.order(:created_at).take(10)
 50.times do
-  content = Faker::Lorem.sentence(5)
+  content = Faker::ChuckNorris.fact
   users.each { |user| user.microposts.create!(content: content) }
 end
