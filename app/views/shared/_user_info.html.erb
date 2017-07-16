@@ -1,3 +1,6 @@
 <h2><%= current_user.profile.first_name + " " +  current_user.profile.last_name %></h2>
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
 <span><%= link_to "view my profile", current_user %></span>
 <span><%= pluralize(current_user.microposts.count, "micropost") %></span>

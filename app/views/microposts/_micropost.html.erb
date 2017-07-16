@@ -7,12 +7,5 @@
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-    <% if current_user == micropost.user %>
-      <%= link_to "delete", micropost,  method: :delete, 
-                                        data: { confirm: "you sure?" } %>
-    <% else  %>
-      <%= link_to "follow", micropost,  method: :follow, 
-                                        data: { confirm: "you sure?" } %>
-    <% end %>
   </span>
 </li>
