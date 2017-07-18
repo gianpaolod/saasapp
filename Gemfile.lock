@@ -276,6 +276,7 @@ DEPENDENCIES
   aws-sdk
   bootstrap-sass
   bootstrap-will_paginate
+  bundler (~> 1.15, >= 1.15.1)
   byebug
   capybara
   carrierwave
