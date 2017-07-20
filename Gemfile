@@ -46,6 +46,9 @@ gem 'hirb'
 # Use Devise for user authentication
 gem 'devise'
 
+# use Pundit
+gem 'pundit', '~> 1.1'
+
 # Use Stripe for payment processing
 gem 'stripe'
 
@@ -54,7 +57,7 @@ gem 'figaro'
 
 # Use Paperclip and AWS-SDK for image upload
 gem 'fog-aws', group: :production
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.1.0'
 gem "mini_magick"
 gem 'paperclip'
 gem 'aws-sdk'
@@ -63,7 +66,9 @@ gem 'aws-sdk'
 gem 'faker'
 
 group :development, :test do
-  gem 'rspec-rails'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'

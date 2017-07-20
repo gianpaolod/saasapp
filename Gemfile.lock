@@ -1,3 +1,50 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: bcf7d9eb19dc013e4e0b72a588e4eac53933bb68
+  branch: master
+  specs:
+    rspec-core (3.7.0.pre)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 1c9d5d960115ff0de803819580956a2615778a7d
+  branch: master
+  specs:
+    rspec-expectations (3.7.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 0820af734f1a8926b0fee4fa4dd3e00ff70b4990
+  branch: master
+  specs:
+    rspec-mocks (3.7.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: ac759a3691242b971ee8388ea77a8051d6fe15b4
+  branch: master
+  specs:
+    rspec-rails (3.7.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.7.0.pre)
+      rspec-expectations (= 3.7.0.pre)
+      rspec-mocks (= 3.7.0.pre)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 70a8b33fb194f5014e37d99dc3d9acca88ab8647
+  branch: master
+  specs:
+    rspec-support (3.7.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,13 +90,13 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.1.2.3)
       execjs
-    aws-sdk (2.10.13)
-      aws-sdk-resources (= 2.10.13)
-    aws-sdk-core (2.10.13)
+    aws-sdk (2.10.14)
+      aws-sdk-resources (= 2.10.14)
+    aws-sdk-core (2.10.14)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.10.13)
-      aws-sdk-core (= 2.10.13)
+    aws-sdk-resources (2.10.14)
+      aws-sdk-core (= 2.10.14)
     aws-sigv4 (1.0.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
@@ -167,6 +214,8 @@ GEM
     pg (0.21.0)
     public_suffix (2.0.5)
     puma (3.9.1)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -200,23 +249,6 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    rspec-core (3.6.0)
-      rspec-support (~> 3.6.0)
-    rspec-expectations (3.6.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.6.0)
-    rspec-mocks (3.6.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.6.0)
-    rspec-rails (3.6.0)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.6.0)
-      rspec-expectations (~> 3.6.0)
-      rspec-mocks (~> 3.6.0)
-      rspec-support (~> 3.6.0)
-    rspec-support (3.6.0)
     ruby_dep (1.5.0)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
@@ -279,7 +311,7 @@ DEPENDENCIES
   bundler (~> 1.15, >= 1.15.1)
   byebug
   capybara
-  carrierwave
+  carrierwave (~> 1.1.0)
   coffee-rails
   database_cleaner
   devise
@@ -296,8 +328,13 @@ DEPENDENCIES
   paperclip
   pg
   puma
+  pundit (~> 1.1)
   rails (= 5.1.2)
-  rspec-rails
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails
   shoulda-matchers
   spring
