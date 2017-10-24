@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @contact = Contact.new
     @basic_plan = Plan.find(1)
     @pro_plan = Plan.find(2)
     if user_signed_in?

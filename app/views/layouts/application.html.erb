@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Saasapp</title>
+    <title>Homes Solutions</title>
     <%= csrf_meta_tags %>
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,12 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <!--<audio src="public/audioplayback.m4a" autoplay controls loop>-->
+    <!--  <p>Your browser does not support HTML5 audio playback</p>-->
+    <!--</audio>-->
+    
+    
+    <nav class="navbar navbar-default yamm" role="navigation">
       <div class='container'>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -21,7 +26,7 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path, class: "navbar-brand" do %>
-            <i class="fa fa-scribd"></i> Sidercom, C.A.
+            <i class="fa fa-cogs fa-3x"></i> JF Homes Solutions LLC.
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -29,16 +34,16 @@
             <% if user_signed_in? %>
               <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
             <% else %>
-              <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
+              <!--<%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>-->
             <% end %>
           </div>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><%= link_to "Comunity", users_path %></li>
-              <li><%= link_to "My Account", edit_user_registration_path %></li>
+              #<li><%= link_to "Comunity", users_path %></li>
+              #<li><%= link_to "My Account", edit_user_registration_path %></li>
             <% end %>
-            <li><%= link_to "Nosotros", about_path %></li>
-            <li><%= link_to "Contáctanos", new_contact_path %></li>
+            <!--<li><%= link_to "About", about_path %></li>-->
+            <!--<li><%= link_to "Contact us", new_contact_path %></li>-->
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
