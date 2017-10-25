@@ -53,11 +53,11 @@ gem 'devise'
 gem 'figaro'
 
 # Use Paperclip and AWS-SDK for image upload
-# gem 'fog-aws', group: :production
+ gem 'fog-aws', group: :production
  gem 'carrierwave'
-# gem "mini_magick"
+ gem "mini_magick"
  gem 'paperclip'
-# gem 'aws-sdk'
+ gem 'aws-sdk'
 
 # Faking users and content
 gem 'faker'
