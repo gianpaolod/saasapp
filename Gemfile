@@ -32,8 +32,8 @@ gem 'jbuilder'
 # gem 'capistrano-rails', group: :development
 
 # Use Pagination
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+# gem 'will_paginate'
+# gem 'bootstrap-will_paginate'
 # Use Twitter Bootstrap library for front-end UI and layout
 gem 'bootstrap-sass'
 
@@ -47,17 +47,17 @@ gem 'hirb'
 gem 'devise'
 
 # Use Stripe for payment processing
-gem 'stripe'
+# gem 'stripe'
 
 # Use Figaro for ENV variables
 gem 'figaro'
 
 # Use Paperclip and AWS-SDK for image upload
-gem 'fog-aws', group: :production
-gem 'carrierwave'
-gem "mini_magick"
-gem 'paperclip'
-gem 'aws-sdk'
+# gem 'fog-aws', group: :production
+ gem 'carrierwave'
+# gem "mini_magick"
+ gem 'paperclip'
+# gem 'aws-sdk'
 
 # Faking users and content
 gem 'faker'
@@ -77,8 +77,8 @@ group :development do
   gem 'web-console'
   gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen'
+  # gem 'spring'
+  # gem 'spring-watcher-listen'
 end
 
 group :production do
